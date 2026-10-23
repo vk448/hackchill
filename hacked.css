@@ -1,0 +1,74 @@
+
+:root {
+    --text-color: #39FF14;
+    --bg-clr: rgb(15, 15, 15);
+    --boba: #6F4E37
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-clr);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+    color: var(--text-color);
+    font-family: monospace;
+    max-width: 100%;
+    padding: 20px;
+   animation: creepyglow 3s ease-in-out infinite;
+}
+@keyframes creepyglow {
+    0%, 100% {
+        opacity: 1;
+        text-shadow:
+            0 0 5px var(--text-color),
+            0 0 15px var(--text-color),
+            0 0 25px var(--text-color);
+    }
+
+    50% {
+        opacity: 0.65;
+        text-shadow:
+            0 0 2px var(--text-color),
+            0 0 5px var(--text-color);
+    }
+}
+.logo {
+    width: 100px;
+    height: auto;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+ 
+   animation: logo-glow 3s ease-in-out infinite;
+}
+
+@keyframes logo-glow {
+    0%, 100% {
+        opacity: 1;
+        filter:
+            drop-shadow(0 0 10px var(--boba))
+            drop-shadow(0 0 20px var(--boba))
+            drop-shadow(0 0 30px var(--boba));
+    }
+
+    50% {
+        opacity: 0.65;
+        filter:
+            drop-shadow(0 0 5px var(--boba))
+            drop-shadow(0 0 10px var(--boba))
+            drop-shadow(0 0 15px var(--boba));
+    }
+}
+
+

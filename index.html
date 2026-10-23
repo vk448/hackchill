@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boba bash </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="black-screen" id="blackScreen"></div>
+<div class="crazy-screen" id="crazyScreen">
+    <p id="randomText">BOBA BASH</p>
+</div>
+<div class="error-layer" id="errorLayer"></div>
+<div class="jumpscare" id="jumpscare">
+    <img src="assets/boba.png" alt="boba">
+    <p>BOBA SEES YOU</p>
+</div>
+<header>
+   <div class="glitch-overlay" id="glitchOverlay">
+    <span>BOBA BASH</span>
+    <p>SYSTEM GLITCH...</p>
+</div>
+<header class="header">
+ <div class="header-content">
+    <div class="brand">
+        <img alt="boba" src="assets/boba.png" class="logo">
+        <h1>Boba Bash</h1>
+    </div>
+     <nav class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+  </nav>
+  <div class="auth">
+    <a href="#login">Login</A>
+    <a href="#signup">Sign Up</A>
+  </div>
+</div>
+  </header>
+<div>
+    <content class="content">
+       <img src="assets/boba drink.jpg" alt="boba drink" class="hero-image">
+        <h1>Welcome to Boba Bash</h1>
+        <p>Discover the best boba tea in town!</p>
+        <a href="#menu" class="btn">Explore </a>
+    </content>
+</div>
+</header>
+<div id="menuPage" class="menu-page" style="display: none;">
+    <h2 class="menu-title">Our Menu</h2>
+    <div class="menu-grid">
+        <div class="card">
+            <h3>Classic Milk Boba</h3>
+            <p>Black tea + chewy pearls</p>
+            <span class="price">$5</span>
+        </div>
+        <div class="card">
+            <h3>Strawberry Boba</h3>
+            <p>Fresh strawberry slush</p>
+            <span class="price">$6</span>
+        </div>
+        <div class="card">
+            <h3>Chocolate Boba</h3>
+            <p>Cocoa + brown sugar pearls</p>
+            <span class="price">$6</span>
+        </div>
+        <div class="card">
+            <h3>Mango Boba</h3>
+            <p>Mango pulp + milk</p>
+            <span class="price">$5</span>
+        </div>
+    </div>
+    <a href="#home" class="btn back-btn" id="backBtn" onclick="goBackHome();return false;">Back to Home</a>
+</div>
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Boba Bash. All rights reserved.</p>
+
+    </div>
+</footer>
+</body>
+<script src="script.js"></script>
+<script>
+    const glitch = document.getElementById("glitchOverlay");
+
+    function triggerGlitch() {
+        glitch.classList.add("active");
+
+        setTimeout(() => {
+            glitch.classList.remove("active");
+        }, 1000);
+    }
+
+    setTimeout(() => {
+        triggerGlitch();
+        setInterval(() => {
+            triggerGlitch();
+        }, 20000);
+
+    }, 10000);
+</script>
+
+
+</html>
